@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+*{font-weight:bold;}h1{text-decoration:underline;}
+div{padding:30px;position:center;border:2px solid red;margin-left:300px;margin-right:400px;background-color:lightgreen;color:tomato;}
+table{color:blue;}
+button{color:blue;position:center;padding:5px;}
+</style>
+<script>
+function java()
+{
+  var x,a,b,c,d;
+a=parseInt(document.getElementById('one').value)
+b=parseInt(document.getElementById('two').value)
+x=(a/b)*100
+document.getElementById('three').value=x
+c=Math.floor(x/10)
+switch(c)
+{case 10:
+case 9:d="Ex";break;
+case 8:d="A";break;
+case 7:d="B";break;
+case 6:d="C";break;
+case 5:d="D";break;
+case 4:d="E";break;
+default:d="R";break;
+}
+document.getElementById('four').value=d
+}
+</script>
+</head>
+<body>
+<div>
+<table border="0">
+<h1>percentage and grade</h1>
+<tr>
+<td>OBTAINED MARKS:</td>
+<td><input type="text" id="one"></td>
+</tr>
+<tr>
+<td>TOTAL MARKS:</td>
+<td><input type="text" id="two"></td>
+</tr>
+<tr>
+<td colspan="2" align="center"><button onclick="java()">Calculate</button></td>
+</tr>
+<tr>
+<td> PERCENTAGE:</td>
+<td> <input type="text" id="three"></td>
+</tr>
+<tr>
+<td>GRADE:</td>
+<td> <input type="text" id="four"></td>
+</tr>
+</table>
+</div>
+</body>
+</html>
